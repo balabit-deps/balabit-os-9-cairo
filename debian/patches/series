@@ -6,3 +6,7 @@ Minor-cleanups.patch
 02_am-maintainer-mode.patch
 03_export-symbols.patch
 06_hurd-map-noreserve.patch
+CVE-2017-9814-1.patch
+CVE-2017-9814-2.patch
+CVE-2019-6461.patch
+CVE-2019-6462.patch

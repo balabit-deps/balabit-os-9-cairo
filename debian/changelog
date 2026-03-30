@@ -1,3 +1,22 @@
+cairo (1.16.0-5ubuntu2.1) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: heap buffer overflow
+    - debian/patches/CVE-2017-9814-1.patch: replace calls to malloc with
+      _cairo_malloc.
+    - debian/patches/CVE-2017-9814-2.patch: check cmap size before allocating
+      memory in src/cairo-truetype-subset.c.
+    - CVE-2017-9814
+  * SECURITY UPDATE: assertion failure
+    - debian/patches/CVE-2019-6461.patch: adds check for NaN angles in
+      src/cairo-arc.c.
+    - CVE-2019-6461
+  * SECURITY UPDATE: infinite loop
+    - debian/patches/CVE-2019-6462.patch: defines max_segments for use in a
+      while loop conditional to prevent an infinite loop in src/cairo-arc.c.
+    - CVE-2019-6462
+
+ -- Ian Constantin <ian.constantin@canonical.com>  Mon, 30 Mar 2026 16:16:09 +0300
+
 cairo (1.16.0-5ubuntu2) impish; urgency=medium
 
   * No-change rebuild to build packages with zstd compression.

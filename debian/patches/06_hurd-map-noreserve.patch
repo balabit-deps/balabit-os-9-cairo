@@ -7,10 +7,10 @@ Subject: Hurd has no MAP_NORESERVE so don't use it there
  util/cairo-sphinx/sphinx.c | 4 ++++
  2 files changed, 8 insertions(+)
 
-diff --git a/test/cairo-test-trace.c b/test/cairo-test-trace.c
-index 5badc43..5c059b4 100644
---- a/test/cairo-test-trace.c
-+++ b/test/cairo-test-trace.c
+Index: cairo-1.16.0/test/cairo-test-trace.c
+===================================================================
+--- cairo-1.16.0.orig/test/cairo-test-trace.c
++++ cairo-1.16.0/test/cairo-test-trace.c
 @@ -545,7 +545,11 @@ spawn_shm (const char *shm_path)
  
      base = mmap (NULL, DATA_SIZE,
@@ -23,10 +23,10 @@ index 5badc43..5c059b4 100644
  		 fd, 0);
      close (fd);
  
-diff --git a/util/cairo-sphinx/sphinx.c b/util/cairo-sphinx/sphinx.c
-index 238d400..9384edd 100644
---- a/util/cairo-sphinx/sphinx.c
-+++ b/util/cairo-sphinx/sphinx.c
+Index: cairo-1.16.0/util/cairo-sphinx/sphinx.c
+===================================================================
+--- cairo-1.16.0.orig/util/cairo-sphinx/sphinx.c
++++ cairo-1.16.0/util/cairo-sphinx/sphinx.c
 @@ -1337,7 +1337,11 @@ client_shm (const char *shm_path)
  
      base = mmap (NULL, DATA_SIZE,
